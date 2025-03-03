@@ -1,0 +1,13 @@
+webservers:
+  hosts:
+    webserver1:
+      ansible_host: <ip address provided for Windows VM>
+      ansible_user: Administrator
+      ansible_password: JustM300
+      ansible_connection: winrm
+      ansible_winrm_transport: ntlm
+      ansible_winrm_server_cert_validation: ignore
+    webserver2:
+      ansible_host: <ip address provided for Ubuntu VM>
+      ansible_user: ubuntu
+      ansible_ssh_private_key_file: /home/ubuntu/.ssh/id_rsa
