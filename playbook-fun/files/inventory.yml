@@ -1,0 +1,17 @@
+windows:
+  hosts:
+    webserver1:
+      ansible_host: 54.153.58.29
+  vars:
+    ansible_connection: winrm
+    ansible_winrm_transport: ntlm
+    ansible_winrm_server_cert_validation: ignore
+    ansible_user: Administrator
+    ansible_password: JustM300
+linux:
+  hosts:
+    webserver2:
+      ansible_host: <IP or hostname of the Ubuntu server>
+  vars:
+      ansible_user: ubuntu
+      ansible_ssh_private_key_file: /home/ubuntu/.ssh/id_rsa
