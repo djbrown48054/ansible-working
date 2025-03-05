@@ -1,0 +1,7 @@
+#windows connection details
+ansible_connection: winrm
+ansible_winrm_transport: ntlm
+ansible_winrm_server_cert_validation: ignore
+#Database details
+ip_address: 192.168.2.2
+database_name: Adventrueworks
