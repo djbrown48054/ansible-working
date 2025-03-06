@@ -1,0 +1,12 @@
+---
+- name: Ensure IIS is uninstalled
+  hosts: all
+  become: yes
+  become_user: Administrator
+  tasks:
+    - name: Ensure IIS Server is uninstalled
+      win_feature:
+        name:  Web-Server
+        state: absent
+      tags:
+        - uninstall-iis
